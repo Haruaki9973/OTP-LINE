@@ -1,1 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>認証結果</title>
+    <style>
+        body { font-family: Arial; text-align: center; padding: 50px; }
+        .result { font-size: 24px; font-weight: bold; color: #333; }
+        a { display: inline-block; margin-top: 20px; text-decoration: none; color: #007bff; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="result">{{ result }}</div>
+
+    {% if result != "認証成功！" %}
+        <a href="/generate">新しいOTPを発行する</a>
+    {% endif %}
+</body>
+</html>
 
